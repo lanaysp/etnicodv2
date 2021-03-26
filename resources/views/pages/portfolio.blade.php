@@ -21,13 +21,28 @@
           <li><a href="/#services">Services</a></li>
           <li><a href="/#portfolio">Portfolio</a></li>
           <li><a href="/#team">Team</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="/blog">Blog</a></li>
           <li><a href="/#contact">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
 
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+       @guest
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="{{ route('login') }}" class="btn get-started-btn">Masuk</a>
+            <a href="{{ route('register') }}" class="btn get-started-btn">Daftar</a>
+        </div>
+        @endguest
+        @auth
+
+        @if ( Auth::user()->id != 1)
+            <a href="{{ route('dashboard') }}" class="get-started-btn scrollto text-uppercase"><i class="bx bx-user"></i> {{ Auth::user()->name }}</a>
+        @else
+            <a href="{{ route('admin-dashboard') }}" class="get-started-btn scrollto text-uppercase"><i class="bx bx-user"></i> {{ Auth::user()->name }}</a>
+        @endif
+
+        @endauth
 
     </div>
   </header><!-- End Header -->
@@ -54,15 +69,16 @@
           <h2>Portfolio</h2>
           <p>Alhamdulillah berkat kekompakan dan komitmen kami dalam membantu pertumbuhan UMKM di Indonesia, kami berhasil memberikan hasil terbaik dalam pengembangan bisnis clients. Berikut beberapa portfolio yang bisa kami hadirkan:</p>
         </div>
-            <ul id="portfolio-flters" class="flex-wrap d-lg-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-web">WEBSITE</li>
-              <li data-filter=".filter-seo">SEO</li>
-              <li data-filter=".filter-desaingrafis">DESAIN GRAFIS</li>
-              <li data-filter=".filter-andorid">ANDROID</li>
-              <li data-filter=".filter-andorid">EDITING VIDEO</li>
-              <li data-filter=".filter-andorid">IKLAN ADS</li>
-            </ul>
+
+                 <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-web">WEBSITE</li>
+                    <li data-filter=".filter-seo">SEO</li>
+                    <li data-filter=".filter-desaingrafis">DESAIN GRAFIS</li>
+                    <li data-filter=".filter-andorid">ANDROID</li>
+                    <li data-filter=".filter-andorid">EDITING VIDEO</li>
+                    <li data-filter=".filter-andorid">IKLAN ADS</li>
+                </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             @foreach ($portfolios as $item)

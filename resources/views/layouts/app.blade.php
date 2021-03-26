@@ -54,6 +54,7 @@
 
 {{-- footer --}}
 @include('includes.footer')
+@include('sweetalert::alert')
 
 {{-- script --}}
 @stack('perpend-script')

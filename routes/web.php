@@ -19,8 +19,15 @@ Route::get('/', 'HomeController@index')->name('home');
 // home
 Route::post('/', 'HomeController@update')->name('root');
 
+Route::post('/', 'HomeController@send')
+        ->name('home-store');
 
-Route::get('/success', 'CartController@success')->name('success');
+
+// Route::get('/success', 'HomeController@success')->name('success');
+
+Route::get('/success', function () {
+   return view('pages.success-regist');
+});
 
 Route::get('/register/success', 'Auth\RegisterController@success')->name('register-success');
 

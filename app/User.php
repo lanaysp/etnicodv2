@@ -7,9 +7,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Province;
 use App\Models\Regency;
-class User extends Authenticatable
+use App\Notifications\CustomVerifyEmailNotification;
+use App\Notifications\CustomResetPasswordNotification;
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use Notifiable;
+    use Notifiable ;
 
     /**
      * The attributes that are mass assignable.
@@ -60,6 +62,20 @@ class User extends Authenticatable
       // Tambahan profile
     public function product(){
         return $this->hasOne(Product::class, 'id', 'products_id');
+    }
+
+
+      public function sendEmailVerificationNotification()
+
+    {
+
+        $this->notify(new CustomVerifyEmailNotification);
+
+    }
+
+       public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new CustomResetPasswordNotification($token));
     }
 
 }

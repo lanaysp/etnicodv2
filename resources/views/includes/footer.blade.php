@@ -7,8 +7,9 @@
           <div class="col-lg-6">
             <h4>Join Our Newsletter</h4>
             <p>Dapatkan informasi terbaru seputar Bisnis & Teknologi bersama Etnicode</p>
-            <form action="" method="">
-              <input type="email"><input type="submit" value="Subscribe">
+            <form action="{{ route('home-store') }}" method="POST">
+                @csrf
+              <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
         </div>

@@ -96,8 +96,8 @@ class RegisterController extends Controller
     {
         $this->guard()->logout();
 
-        alert()->success('Success','Registrasi berhasil, Silahkan verifikasi email anda.');
+        // alert()->success('Success','Registrasi berhasil, Silahkan verifikasi email anda.');
 
-        return redirect()->route('login');
+        return redirect()->route('register-success');
     }
 }

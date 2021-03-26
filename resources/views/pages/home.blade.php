@@ -15,15 +15,32 @@
           <li class="active"><a href="/">Home</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#services">Services</a></li>
-          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
           <li><a href="/#team">Team</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="/blog">Blog</a></li>
           <li><a href="/#contact">Contact</a></li>
-
+          <li><a class="d-lg-none d-xl-block" href="{{ route('login') }}">Masuk</a></li>
+          <li><a class="d-lg-none d-xl-block" href="{{ route('register') }}">Daftar</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#about" class="get-started-btn scrollto">Account</a>
+          @guest
+          <div class="d-none d-sm-block">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="{{ route('login') }}" class="btn get-started-btn">Masuk</a>
+                <a href="{{ route('register') }}" class="btn get-started-btn">Daftar</a>
+              </div>
+          </div>
+            @endguest
+            @auth
+
+        @if ( Auth::user()->id != 1)
+            <a href="{{ route('dashboard') }}" class="get-started-btn scrollto text-uppercase"><i class="bx bx-user"></i> {{ Auth::user()->name }}</a>
+        @else
+            <a href="{{ route('admin-dashboard') }}" class="get-started-btn scrollto text-uppercase"><i class="bx bx-user"></i> {{ Auth::user()->name }}</a>
+        @endif
+
+        @endauth
 
     </div>
   </header><!-- End Header -->
@@ -37,8 +54,8 @@
           <h1>Go Digital Dengan Website Profesional</h1>
           <h2>Mulai Nikmati Kemudahan Membuat Website Dengan Cepat, Hemat & Profesional Bersama Etnicode Solution</h2>
           <div class="d-lg-flex">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://youtu.be/wzIc96oRWhY" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
+            <a href="#about" class="btn-get-started scrollto">Muali Kerja Sama Dengan Kami</a>
+            <a href="https://youtu.be/wzIc96oRWhY" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Lihat Video <i class="icofont-play-alt-2"></i></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -304,7 +321,7 @@
     </section><!-- End Cta Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    {{-- <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -323,7 +340,7 @@
 
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-          {{-- @foreach ($result as $resultItem) --}}
+          @foreach ($result as $resultItem)
             @foreach ($portfolios as $item)
 
                 <div class="owl-carousel col-lg-4 col-md-6 portfolio-item {{ $item->kategori }}">
@@ -336,11 +353,12 @@
 
             </div>
             @endforeach
-          {{-- @endforeach --}}
+          @endforeach
         </div>
             <a href="/portfolio" class="btn btn-outline-primary">Lihat lebih banyak</a>
       </div>
-    </section><!-- End Portfolio Section -->
+    </section> --}}
+    <!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
@@ -352,8 +370,10 @@
         </div>
 
         <div class="row">
+            <div class="col-12">
+              <div class="owl-carousel owl-theme owl-stage">
             @foreach ($teams as $team)
-        <div class="col-lg-6 mb-2">
+            {{-- <div class="col-lg-6 mb-2"> --}}
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
               <div class="pic"><img src="{{ Storage::url($team->photo) }}" class="img-fluid" alt=""></div>
               <div class="member-info">
@@ -367,9 +387,11 @@
                 </div>
               </div>
             </div>
-          </div>
+        {{-- </div> --}}
             @endforeach
         </div>
+    </div>
+</div>
 
       </div>
     </section><!-- End Team Section -->
@@ -384,6 +406,7 @@
         </div>
 
         <div class="row">
+
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
@@ -705,7 +728,7 @@ document.getElementById("text-info").innerHTML = '<span class="no">'+text_no+'</
 
 var owl = $('.owl-carousel');
 owl.owlCarousel({
-    items:1,
+    items:2,
     loop:true,
     margin:10,
     autoplay:true,
@@ -713,11 +736,19 @@ owl.owlCarousel({
     autoplayHoverPause:true
 });
 $('.play').on('click',function(){
-    owl.trigger('play.owl.autoplay',[1000])
+    owl.trigger('play.owl.autoplay',[2000])
 })
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
 })
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+});
   </script>
 @endpush
 

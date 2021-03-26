@@ -15,5 +15,5 @@ class Newsletter extends Model
 
     protected $hidden = [];
 
-     protected $table ="newsletter";
+     protected $table ="newslatter";
 }

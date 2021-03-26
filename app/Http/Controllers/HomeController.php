@@ -38,16 +38,16 @@ class HomeController extends Controller
         ]);
 
     }
-    public function update(Request $request)
+    public function send(NewsletterRequest $request)
+
     {
         $data = $request->all();
-
+        // dd($data);
         Newsletter::create($data);
-
-        alert()->success('Success','Trimaksih Telah bergabung dengan kami');
-
-        return redirect()->route('/');
+        toast('Terimakasih! , anda akan mendapatkan info info menarik dari kami','success');
+         return redirect()->route('home');
     }
+
 
 
 }

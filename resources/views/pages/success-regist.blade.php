@@ -21,28 +21,13 @@
           <li><a href="/#services">Services</a></li>
           <li><a href="/#portfolio">Portfolio</a></li>
           <li><a href="/#team">Team</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="/blog">Blog</a></li>
           <li><a href="/#contact">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
 
 
-       @guest
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <a href="{{ route('login') }}" class="btn get-started-btn">Masuk</a>
-            <a href="{{ route('register') }}" class="btn get-started-btn">Daftar</a>
-        </div>
-        @endguest
-        @auth
-
-        @if ( Auth::user()->id != 1)
-            <a href="{{ route('dashboard') }}" class="get-started-btn scrollto text-uppercase"><i class="bx bx-user"></i> {{ Auth::user()->name }}</a>
-        @else
-            <a href="{{ route('admin-dashboard') }}" class="get-started-btn scrollto text-uppercase"><i class="bx bx-user"></i> {{ Auth::user()->name }}</a>
-        @endif
-
-        @endauth
+      <a href="#about" class="get-started-btn scrollto">Get Started</a>
 
     </div>
   </header><!-- End Header -->
@@ -61,8 +46,8 @@
       <div class="container" data-aos="fade-up">
 
           <div class="section-title">
-              <h2 class="bx-bx-smile">Success</h2>
-              <img src="/images/ilustrasi/send-email.png" alt="" style="width: 30%">
+              <h2>Registrasi Berhasil</h2>
+              <img src="/images/brand.png" alt="" style="width: 20%">
           <p>Registrasi berhasil silahkan cek email anda dan verifikasi akun anda. </p>
         </div>
 
