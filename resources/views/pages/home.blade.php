@@ -12,7 +12,7 @@
 @section('content')
 <nav class="nav-menu d-none d-lg-block ml-auto">
         <ul>
-          <li class="active"><a href="/">Home</a></li>
+          <li class="active"><a href="/">Homes</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#services">Services</a></li>
           <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
