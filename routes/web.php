@@ -110,6 +110,7 @@ Route::prefix('admin')
     ->group(function() {
         Route::get('/', 'DashboardController@index')->name('admin-dashboard');
         Route::resource('suport', 'SuportController');
+        Route::resource('newsletter', 'NewsletterController');
         Route::resource('portfolio', 'PortfolioController');
         Route::resource('team', 'TeamController');
         Route::resource('user', 'UserController');

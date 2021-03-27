@@ -9,6 +9,17 @@
     array (
     ),
   ),
+  'devmarketer/easynav' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'DevMarketer\\EasyNav\\EasyNavServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Nav' => 'DevMarketer\\EasyNav\\EasyNavFacade',
+    ),
+  ),
   'facade/ignition' => 
   array (
     'providers' => 
@@ -48,6 +59,13 @@
       0 => 'Laravel\\Ui\\UiServiceProvider',
     ),
   ),
+  'laravelista/comments' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravelista\\Comments\\ServiceProvider',
+    ),
+  ),
   'nesbot/carbon' => 
   array (
     'providers' => 
@@ -83,6 +101,13 @@
     'aliases' => 
     array (
       'Sentry' => 'Sentry\\Laravel\\Facade',
+    ),
+  ),
+  'spatie/laravel-honeypot' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Honeypot\\HoneypotServiceProvider',
     ),
   ),
   'yajra/laravel-datatables-oracle' => 

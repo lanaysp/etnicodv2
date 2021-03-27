@@ -42,6 +42,9 @@
                <li class="{{ (request()->is('admin/portfolio')) ? 'active' : '' }}"><a class="nav-link" href="{{ route('portfolio.index') }}"><i class="far fa-bookmark"></i></i> <span>Portfolio</span></a></li>
                <li class="{{ (request()->is('admin/team')) ? 'active' : '' }}"><a class="nav-link" href="{{ route('team.index') }}"><i class="fas fa-address-card"></i></i> <span>Team</span></a></li>
                <hr>
+               <li class="{{ (request()->is('admin/newsletter')) ? 'active' : '' }}"><a class="nav-link" href="{{ route('newsletter.index') }}"><i class="fas fa-envelope-open-text"></i></i> <span>Newsletter</span></a></li>
+
+               <hr>
                <li><a class="nav-link" href="/dashboard/logout"><i class="fas fa-sign-out-alt"></i></i> <span>Out</span></a></li>
 
         </aside>

@@ -35,7 +35,7 @@
         </div>
       </section>
     </div>
-    @endif --}}
+    @endif
 
      <div class="container mt-3 mb-3">
       <div class="row justify-content-end">
@@ -47,9 +47,10 @@
           @endif
         </div>
       </div>
-    </div>
+    </div> --}}
 
 {{-- page content --}}
+@include('includes.navbar-menu')
 @yield('content')
 
 {{-- footer --}}

@@ -5,11 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
+use Laravelista\Comments\Commentable;
 
 class Blog extends Model
 {
-    use SoftDeletes;
-    
+    use SoftDeletes,Commentable;
+
     protected $fillable = [
         'name', 'users_id', 'blogcategories_id', 'photo', 'description', 'slug'
     ];

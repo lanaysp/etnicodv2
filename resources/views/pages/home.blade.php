@@ -10,40 +10,6 @@
 @endpush
 
 @section('content')
-<nav class="nav-menu d-none d-lg-block ml-auto">
-        <ul>
-          <li class="active"><a href="/">Homes</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#services">Services</a></li>
-          <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
-          <li><a href="/#team">Team</a></li>
-          <li><a target="_blank" rel="noopener noreferrer" href="/blog">Blog</a></li>
-          <li><a href="/#contact">Contact</a></li>
-          <li><a class="d-lg-none d-xl-block" href="{{ route('login') }}">Masuk</a></li>
-          <li><a class="d-lg-none d-xl-block" href="{{ route('register') }}">Daftar</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-
-          @guest
-          <div class="d-none d-sm-block">
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <a href="{{ route('login') }}" class="btn get-started-btn">Masuk</a>
-                <a href="{{ route('register') }}" class="btn get-started-btn">Daftar</a>
-              </div>
-          </div>
-            @endguest
-            @auth
-
-        @if ( Auth::user()->id != 1)
-            <a href="{{ route('dashboard') }}" class="get-started-btn scrollto text-uppercase"><i class="bx bx-user"></i> {{ Auth::user()->name }}</a>
-        @else
-            <a href="{{ route('admin-dashboard') }}" class="get-started-btn scrollto text-uppercase"><i class="bx bx-user"></i> {{ Auth::user()->name }}</a>
-        @endif
-
-        @endauth
-
-    </div>
-  </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -69,29 +35,18 @@
   <main id="main">
 
     <!-- ======= Suport Section ======= -->
-    <section id="cliens" class="cliens section-bg">
-      <div class="container">
-
+   <section id="cliens" class="cliens section-bg">
+    <div class="container">
         <div class="row" data-aos="zoom-in">
-
-            <div class="col-lg-12 d-flex align-items-center justify-content-center">
-                 @forelse ($suports as $suport)
+            @foreach ($suports as $suport)
+            <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
                 <a href="{{ $suport->link }}">
-                    <img src="{{ Storage::url($suport->photo) }}" class="img-fluid" alt="{{ $suport->name }}" style="width: 6000px;">
+                    <img src="{{ Storage::url($suport->photo) }}" class="img-fluid" alt="{{ $suport->name }}">
                 </a>
-          @empty
-            <div class="col-12 text-center py-5"
-                data-aos="fade-up"
-                data-aos-delay="100">
-                Kosong
             </div>
-        @endforelse
-            </div>
-
-
+            @endforeach
         </div>
-
-      </div>
+    </div>
     </section><!-- End Cliens Section -->
 
     <!-- ======= About Us Section ======= -->
@@ -370,10 +325,10 @@
         </div>
 
         <div class="row">
-            <div class="col-12">
-              <div class="owl-carousel owl-theme owl-stage">
+            {{-- <div class="col-12"> --}}
+              {{-- <div id="team" class="owl-carousel"> --}}
             @foreach ($teams as $team)
-            {{-- <div class="col-lg-6 mb-2"> --}}
+            <div class="col-lg-6 mb-2">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
               <div class="pic"><img src="{{ Storage::url($team->photo) }}" class="img-fluid" alt=""></div>
               <div class="member-info">
@@ -387,9 +342,9 @@
                 </div>
               </div>
             </div>
-        {{-- </div> --}}
-            @endforeach
         </div>
+            @endforeach
+        {{-- </div> --}}
     </div>
 </div>
 
@@ -726,30 +681,39 @@ document.getElementById("text-info").innerHTML = '<span class="no">'+text_no+'</
 }
 });
 
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    items:2,
-    loop:true,
-    margin:10,
-    autoplay:true,
-    autoplayTimeout:5000,
-    autoplayHoverPause:true
-});
-$('.play').on('click',function(){
-    owl.trigger('play.owl.autoplay',[2000])
-})
-$('.stop').on('click',function(){
-    owl.trigger('stop.owl.autoplay')
-})
-owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY>0) {
-        owl.trigger('next.owl');
-    } else {
-        owl.trigger('prev.owl');
-    }
-    e.preventDefault();
-});
+
+//  var owl = $('#support');
+//             owl.owlCarousel({
+//                 autoplay:true,
+//                 nav: true,
+//                 margin: 5,
+//                 autoplayTimeout:2000,
+//                 autoplayHoverPause:true,
+//                 responsive: {
+//            0:{
+//             items:1,
+//             nav:true
+//         },
+//         600:{
+//             items:3,
+//             nav:false
+//         },
+//         1000:{
+//             items:4,
+//             nav:true,
+//             loop:true
+//         }
+//           }
+//             });
+//             $('.play').on('click',function(){
+//                 owl.trigger('play.owl.autoplay',[1000])
+//             })
+//             $('.stop').on('click',function(){
+//                 owl.trigger('stop.owl.autoplay')
+//             });
   </script>
+
+
 @endpush
 
 

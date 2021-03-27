@@ -14,30 +14,20 @@
     @stack('perpend-style')
     @include('includes.style')
     @stack('addon-style')
+    @include('includes.navbar')
 
 
-     <div class="container mt-3 mb-3">
-      <div class="row justify-content-end">
-        <div class="col-md-6">
-          @if (session('resent'))
-            <div class="alert alert-success" role="alert">
-              {{ __('A fresh verification link has been sent to your email address.') }}
-            </div>
-          @endif
-        </div>
-      </div>
-    </div>
+    {{-- page content --}}
+    @include('includes.navbar-menu')
+    @yield('content')
 
-{{-- page content --}}
-@yield('content')
+    {{-- footer --}}
+    @include('includes.footer')
 
-{{-- footer --}}
-@include('includes.footer')
-
-{{-- script --}}
-@stack('perpend-script')
-@include('includes.script')
-@stack('addon-script')
+    {{-- script --}}
+    @stack('perpend-script')
+    @include('includes.script')
+    @stack('addon-script')
 
 
     </body>
