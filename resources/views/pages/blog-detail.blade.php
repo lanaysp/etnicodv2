@@ -23,7 +23,7 @@
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
+    <section id="portfolio-details" class="portfolio-details position-relative">
         <div class="container">
           <div class="row">
 
@@ -38,8 +38,10 @@
 
               {!! $blog->description !!}
               </div>
-              <div class="col-lg-3">
-                <div class="col-lg-12">
+              <div class="col-lg-4">
+                  <div class="card">
+                      <div class="card-body">
+                          <div class="col-lg-12">
                    <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <form class="form-inline" action="/blog/cari" method="GET">
@@ -74,7 +76,9 @@
                         <a href="https://my.domainesia.com/ref.php?u=12212" target="_blank"><img src="https://dnva.me/62c54" alt="DomaiNesia"></a>
                     </div>
                 </div>
-            </div>
+                      </div>
+                  </div>
+              </div>
               <div class="col-12">
             <div class="mt-5">
                 share On :
