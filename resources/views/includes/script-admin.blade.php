@@ -16,10 +16,15 @@
 
   <!-- Page Specific JS File -->
   <script>
-      $(document).ready( function () {
+    $(document).ready( function () {
             $('#blog').DataTable();
         } );
+
+    $(document).ready( function () {
+        $('#example').DataTable();
+        } );
   </script>
+
 
 </body>
 </html>

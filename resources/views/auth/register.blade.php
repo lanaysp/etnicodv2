@@ -12,7 +12,7 @@ Register
         <div class="row">
           <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
             <div class="login-brand">
-              <img src="/images/03.png" alt="logo" width="100" class="">
+              <a href="{{ route('home') }}"><img src="/images/03.png" alt="logo" width="100" class=""></a>
             </div>
 
             <div class="card card-primary">
@@ -71,7 +71,7 @@ Register
                   <div class="form-group">
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" name="agree" class="custom-control-input form-checkbox" id="agree">
-                      <label class="custom-control-label" for="agree">Liaht Password</label>
+                      <label class="custom-control-label" for="agree">Lihat Password</label>
                     </div>
                   </div>
                     {{-- <div class="form-group">
@@ -318,7 +318,7 @@ Register
                                 {
                                 position: "top-center",
                                 className: "rounded",
-                                duration: 1000,
+                                duration: 3000,
                                 }
                             );
                             self.email_unavailable = false;
@@ -329,7 +329,7 @@ Register
                                 {
                                 position: "top-center",
                                 className: "rounded",
-                                duration: 1000,
+                                duration: 3000,
                                 }
                             );
                             self.email_unavailable = true;

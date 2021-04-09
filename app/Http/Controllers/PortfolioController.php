@@ -16,7 +16,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolios = Portfolio::get();
+        $portfolios = Portfolio::paginate(3);
         return view('pages.portfolio',[
             'portfolios' => $portfolios
         ]);

@@ -40,7 +40,14 @@
 
             <li class="{{ (request()->is('dashboard')) ? 'active' : '' }}"><a class="nav-link" href="{{ route('dashboard') }}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
             <li class="{{ (request()->is('product')) ? 'active' : '' }}"><a class="nav-link" href="{{ route('product') }}"><i class="fas fa-box-open"></i> <span>Services</span></a></li>
+            @php
+                $item = DB::select('select * from billing where status');
+            @endphp
+            @if ($item != null)
             <li class="{{ (request()->is('billing')) ? 'active' : '' }}"><a class="nav-link" href="{{ route('billing') }}"><i class="fas fa-wallet"></i> <span>Billing</span></a></li>
+            @else
+
+            @endif
                <hr>
                 <li>
                    <a href="{{ route('logout') }}"
@@ -52,6 +59,12 @@
                     @csrf
                 </form>
                 </li>
+             <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+              <a href="{{ route('bundle') }}" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-shopping-basket"></i> Beli Layanan lain
+              </a>
+            </div>
+        </aside>
 
         </aside>
       </div>

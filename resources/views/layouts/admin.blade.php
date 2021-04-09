@@ -22,8 +22,8 @@
       @yield('content')
 
 
-      @include('includes.footer-admin')
-
+    @include('includes.footer-admin')
+    @include('sweetalert::alert')
 
     @stack('perpend-script')
     @include('includes.script-admin')

@@ -30,20 +30,52 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <td class="text-center">
-                    1
-                </td>
-                <td>Web Development</td>
-                <td class="align-middle">
-                    <div class="progress" data-height="4" data-toggle="tooltip" title="20%">
-                    <div class="progress-bar bg-danger" data-width="20%"></div>
-                    </div>
-                </td>
-                <td>01-02-2020</td>
-                <td><div class="badge badge-warning">In Progress</div></td>
-                <td><a href="#" class="btn btn-primary">Review</a></td>
-                </tr>
+                @php
+                        $nomor = 1;
+                        @endphp
+                    @forelse ($data as $item)
+                    <tr>
+                        <td class="text-center">
+                            {{ $nomor++ }}
+                        </td>
+
+                        <td>{{ $item->name }}</td>
+                        <td class="align-middle">
+                            <div class="progress" data-height="4" data-toggle="tooltip" title="{{ $item->progres }}%">
+                            <div class="progress-bar bg-success" data-width="{{ $item->progres }}%"></div>
+                            </div>
+                        </td>
+                        <td>{{ $item->expiration }}</td>
+                            @if ($item->status == 1)
+                            <td><a href="{{ route('billing') }}">
+                                <div class="badge badge-danger">Lanjutkan pembayaran</div></td>
+                                </a>
+                            @elseif ($item->status == 2)
+                            <td><div class="badge badge-warning">Pengecekan Pemabayaran</div></td>
+                            @elseif ($item->status == 3)
+                            <td><div class="badge badge-success">Aktiv</div></td>
+                            @else
+                            <td><div class="badge badge-primary">Closed</div></td>
+                            @endif
+
+                            <td>
+                                @if ($item->status == 3)
+
+                                <a href="#" class="btn btn-warning">Perpanjang</a>
+                                @elseif ($item->status == 2)
+                                <a href="#" class="btn btn-primary">Contact Support</a>
+
+
+                                @else
+
+                                <a href="#" class="btn btn-warning" hidden></a>
+                                @endif
+                            </td>
+                    @empty
+                        <td class="text-center" colspan="6">Tidak Ada Data Untuk Di Tampilkan</td>
+                    </tr>
+                    @endforelse ($data as $item )
+
             </tbody>
             </table>
         </div>
@@ -57,32 +89,5 @@
 @endsection
 
 @push('addon-script')
-<script>
-    function clock() {// We create a new Date object and assign it to a variable called "time".
-        var time = new Date(),
 
-            // Access the "getHours" method on the Date object with the dot accessor.
-            hours = time.getHours(),
-
-            // Access the "getMinutes" method with the dot accessor.
-            minutes = time.getMinutes(),
-
-
-            seconds = time.getSeconds();
-
-        document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
-
-    function harold(standIn) {
-        if (standIn < 10) {
-        standIn = '0' + standIn
-        }
-        return standIn;
-    }
-}
-    setInterval(clock, 1000);
-
-    $(document).ready(function() {
-    $('#example').DataTable();
-} );
-</script>
 @endpush

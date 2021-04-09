@@ -19,7 +19,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        if (request()->ajax()) 
+        if (request()->ajax())
         {
             $query = Blog::with(['blogcategory']);
 
@@ -28,9 +28,9 @@ class BlogController extends Controller
                     return '
                         <div class="btn-group">
                             <div class="dropdown">
-                                <button class="btn btn-primary btn-aksi dropdown-toggle mr-1 mb-1" 
+                                <button class="btn btn-primary btn-aksi dropdown-toggle mr-1 mb-1"
                                     type="button" id="action' .  $item->id . '"
-                                        data-toggle="dropdown" 
+                                        data-toggle="dropdown"
                                         aria-haspopup="true"
                                         aria-expanded="false">
                                         Aksi
@@ -67,7 +67,7 @@ class BlogController extends Controller
     public function create()
     {
         $blogcategories = Blogcategory::all();
-        
+
         return view('pages.admin.blog.create',[
             'blogcategories' => $blogcategories
         ]);
@@ -153,6 +153,7 @@ class BlogController extends Controller
     public function destroy($id)
     {
         $item = Blog::findOrFail($id);
+        Storage::disk('public')->delete($item->photo);
         $item->delete();
 
         alert()->success('Success','Data Berhasil Dihapus.');

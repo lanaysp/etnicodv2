@@ -36,15 +36,15 @@
 
     <!-- ======= Suport Section ======= -->
    <section id="cliens" class="cliens section-bg">
-    <div class="container">
+    <div class="container" >
         <div class="row" data-aos="zoom-in">
-            @foreach ($suports as $suport)
-            <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                <a href="{{ $suport->link }}">
-                    <img src="{{ Storage::url($suport->photo) }}" class="img-fluid" alt="{{ $suport->name }}">
-                </a>
-            </div>
-            @endforeach
+                @foreach ($suports as $suport)
+                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <a href="{{ $suport->link }}">
+                            <img src="{{ Storage::url($suport->photo) }}" class="img-fluid" alt="{{ $suport->name }}">
+                        </a>
+                    </div>
+                @endforeach
         </div>
     </div>
     </section><!-- End Cliens Section -->
@@ -268,7 +268,7 @@
               Hindari hal tersebut dengan menggunakan Layanan Profesional Etnicode.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle scrollto" href="/#contact">Hubungi Etnicode</a>
+            <a class="cta-btn align-middle scrollto" href="{{ route('bundle') }}">Coba Paket Bulanan Kami</a>
           </div>
         </div>
 
@@ -276,43 +276,36 @@
     </section><!-- End Cta Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    {{-- <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Portfolio</h2>
           <p>Alhamdulillah berkat kekompakan dan komitmen kami dalam membantu pertumbuhan UMKM di Indonesia, kami berhasil memberikan hasil terbaik dalam pengembangan bisnis clients. Berikut beberapa portfolio yang bisa kami hadirkan:</p>
         </div>
-
-           <ul id="portfolio-flters" class="" data-aos="fade-up" data-aos-delay="100">
-                <li data-filter=".filter-web" class="bx bx-world"> WEBSITE</li>
-                <li data-filter=".filter-seo" class="bx bx-search"> SEO</li>
-                <li data-filter=".filter-desaingrafis" class="bx bx-image"> DESAIN GRAFIS</li>
-                <li data-filter=".filter-andorid" class="bx bxl-android"> ANDROID</li>
-                <li data-filter=".filter-editing" class="bx bx-movie-play"> EDITING VIDEO</li>
-                <li data-filter=".filter-ads" class="bx bx-slideshow"> IKLAN ADS</li>
-            </ul>
-
+              <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-web">WEBSITE</li>
+                    <li data-filter=".filter-seo">SEO</li>
+                    <li data-filter=".filter-desaingrafis">DESAIN GRAFIS</li>
+                    <li data-filter=".filter-andorid">ANDROID</li>
+                    <li data-filter=".filter-andorid">EDITING VIDEO</li>
+                    <li data-filter=".filter-andorid">IKLAN ADS</li>
+                </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-          @foreach ($result as $resultItem)
             @foreach ($portfolios as $item)
-
-                <div class="owl-carousel col-lg-4 col-md-6 portfolio-item {{ $item->kategori }}">
-              <div class="portfolio-img ">
-                  <img src="{{ Storage::url($item->photo) }}" class="img-fluid" alt=""></div>
+            <div class="col-lg-4 col-md-6 portfolio-item {{ $item->kategori }}">
+              <div class="portfolio-img"><img src="{{ Storage::url($item->photo) }}" class="img-fluid" alt=""></div>
               <div class="portfolio-info">
                 <h4>{{ $item->name }}</h4>
                 <a href="{{ $item->link }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
               </div>
-
             </div>
             @endforeach
-          @endforeach
         </div>
-            <a href="/portfolio" class="btn btn-outline-primary">Lihat lebih banyak</a>
       </div>
-    </section> --}}
+    </section>
     <!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
@@ -681,36 +674,33 @@ document.getElementById("text-info").innerHTML = '<span class="no">'+text_no+'</
 }
 });
 
+  </script>
 
-//  var owl = $('#support');
-//             owl.owlCarousel({
-//                 autoplay:true,
-//                 nav: true,
-//                 margin: 5,
-//                 autoplayTimeout:2000,
-//                 autoplayHoverPause:true,
-//                 responsive: {
-//            0:{
-//             items:1,
-//             nav:true
-//         },
-//         600:{
-//             items:3,
-//             nav:false
-//         },
-//         1000:{
-//             items:4,
-//             nav:true,
-//             loop:true
-//         }
-//           }
-//             });
-//             $('.play').on('click',function(){
-//                 owl.trigger('play.owl.autoplay',[1000])
-//             })
-//             $('.stop').on('click',function(){
-//                 owl.trigger('stop.owl.autoplay')
-//             });
+  <script>
+       var owl = $('#support');
+            owl.owlCarousel({
+                loop:true,
+                autoplay:true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+                responsive: {
+            0: {
+              items: 4
+            },
+            600: {
+              items: 6
+            },
+            1000: {
+              items: 12
+            }
+          }
+            });
+            $('.play').on('click',function(){
+                owl.trigger('play.owl.autoplay',[1000])
+            })
+            $('.stop').on('click',function(){
+                owl.trigger('stop.owl.autoplay')
+            })
   </script>
 
 

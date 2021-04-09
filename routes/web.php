@@ -19,8 +19,10 @@ Route::get('/', 'HomeController@index')->name('home');
 // home
 Route::post('/', 'HomeController@update')->name('root');
 
-Route::post('/', 'HomeController@send')
-        ->name('home-store');
+Route::post('/', 'HomeController@send')->name('home-store');
+
+// layanan
+Route::get('/layanan', 'HomeController@bundle')->name('bundle');
 
 
 // Route::get('/success', 'HomeController@success')->name('success');
@@ -51,6 +53,11 @@ Route::view('verifikasi-email', 'email')->middleware('verified');
 
 Route::group(['middleware' => ['auth']], function(){
 
+    Route::post('/create/layanan', 'HomeController@createbundle')->name('create');
+
+    Route::get('payment/{id}', 'DashboardController@payment')->name('payment');
+
+
     Route::get('/confirm', 'CartController@index')->name('cart');
     Route::delete('/cart/{id}', 'CartController@delete')->name('cart-delete');
 
@@ -58,7 +65,10 @@ Route::group(['middleware' => ['auth']], function(){
 
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/product', 'DashboardController@product')->name('product');
+    // Route::get('/product/{id}', 'DashboardController@product')->name('product');
     Route::get('/billing', 'DashboardController@billing')->name('billing');
+
+    Route::post('/billing/tf/{id}', 'DashboardController@tf')->name('tf');
 
     Route::get('/dashboard/products', 'DashboardProductController@index')
         ->name('dashboard-product');
@@ -94,6 +104,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::post('/dashboard/settings/{redirect}', 'DashboardSettingController@update_store')
         ->name('dashboard-settings-store-redirect');
 
+
 // Ganti Password
     Route::get('password', 'PasswordController@edit')
         ->name('user.password.edit');
@@ -116,6 +127,9 @@ Route::prefix('admin')
         Route::resource('user', 'UserController');
         Route::resource('blogcategory','BlogcategoryController');
         Route::resource('blog','BlogController');
+        Route::resource('layanan','LayananController');
+        Route::post('buktitf/{id}', 'LayananController@buktitf')->name('buktitf');
+
     });
 
 // Auth::routes();
