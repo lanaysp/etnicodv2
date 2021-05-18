@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Etnicode Media Solution
+    Etnicode Digital Solution
 @endsection
 
 @push('addon-style')
@@ -18,14 +18,14 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Go Digital Dengan Website Profesional</h1>
-          <h2>Mulai Nikmati Kemudahan Membuat Website Dengan Cepat, Hemat & Profesional Bersama Etnicode Solution</h2>
+          <h2>Mulai Nikmati Kemudahan Membuat Website Dengan Cepat, Hemat & Profesional Bersama Etnicode Digital Solution</h2>
           <div class="d-lg-flex">
-            <a href="#about" class="btn-get-started scrollto">Muali Kerja Sama Dengan Kami</a>
+            <a href="#about" class="btn-get-started scrollto">Hubungi Tim Etnicode</a>
             <a href="https://youtu.be/wzIc96oRWhY" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Lihat Video <i class="icofont-play-alt-2"></i></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          <img src="/images/ilustrasi/hero.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -71,12 +71,12 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              <b>Etnicode</b> merupakan layanan profesional Jasa Pembuatan Website dengan tampilan profesional
+              <b>Etnicode Digital Solution</b> merupakan layanan profesional Jasa Pembuatan Website dengan tampilan modern
               dan responsive yang siap membantu bisnis anda online dengan mudah dan cepat.
-              Kami melayani berbagai macam pembuatan website seperti website sekolah, website perusahaan,
-              website toko online hingga custom website sesuai kebutuhan anda.
+              Kami melayani berbagai macam pembuatan website, seperti website sekolah, website perusahaan,
+              website toko online, website berita, hingga custom website sesuai kebutuhan anda.
             </p>
-            <a href="/#contact" class="btn-learn-more scrollto">Learn More</a>
+            <a href="/#contact" class="btn-learn-more scrollto">Hubungi Kami</a>
           </div>
         </div>
 
@@ -132,7 +132,7 @@
 
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img w-75" style='background-image: url("/images/ilustrasi/plan.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 
       </div>
@@ -144,7 +144,7 @@
 
         <div class="row">
           <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/skills.png" class="img-fluid" alt="">
+            <img src="/images/ilustrasi/analis.png" class="img-fluid w-75" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
             <h3>Bagaimana Etnicode bisa sukses membantu pertumbuhan bisnis anda?</h3>
@@ -197,8 +197,8 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Sebagai penyedia layanan Jasa Profesional, Etnicode Solution berusaha memberikan keahlian terbaik untuk ikut kontribusi membangun bisnis anda lebih maksimal.
-            Gunakan layanan Etnicode sesuai kebutuhan bisnis anda dan rasakan mudahnya menaikkan omset melalui kekuatan digital:.</p>
+          <p>Sebagai penyedia layanan Jasa Profesional, Etnicode Solution berusaha memberikan keahlian terbaik untuk ikut kontribusi membangun bisnis anda menjadi lebih maksimal.
+            Gunakan layanan Etnicode sesuai kebutuhan bisnis anda dan rasakan mudahnya scale up melalui kekuatan digital:.</p>
         </div>
 
         <div class="row mb-3">
@@ -263,12 +263,12 @@
 
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
-            <h3>Etnicode Media Solution</h3>
+            <h3>Etnicode Digital Solution</h3>
             <p> Diera modern serba digital seperti sekarang ini, jika anda tidak mampu menjangkau pasar yang lebih luas dengan cara memanfaatkan website, kemungkinan besar peluang bangkrut anda semakin dekat.
               Hindari hal tersebut dengan menggunakan Layanan Profesional Etnicode.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle scrollto" href="{{ route('bundle') }}">Coba Paket Bulanan Kami</a>
+            <a class="cta-btn align-middle scrollto" href="{{ route('bundle') }}">Paket Langganan Etnicode</a>
           </div>
         </div>
 
@@ -314,7 +314,7 @@
 
         <div class="section-title">
           <h2>Team</h2>
-          <p>Etnicode terus meningkatkan skill dan pelayanan terbaik untuk menciptakan kenyamanan anda saat bekerjasama dengan kami. Inilah team Etnicode yang akan mendukung bisnis anda bertumbuh lebih cepat melalui kekuatan digital:</p>
+          <p>Etnicode terus meningkatkan skill dalam bidang teknologi digital untuk membantu kemajuan umkm di Indonesia, percayakan bersama kami. Anda cukup fokus meningkatkan omset dan asset perusahaan anda:</p>
         </div>
 
         <div class="row">
@@ -484,7 +484,7 @@
 
         <div class="section-title">
           <h2>Frequently Asked Questions</h2>
-          <p>Berikut pertanyaan yang sering kami terima saat melayani clients dari berbagai wilayah. Sebelum anda terhubung dengan tim Etnicode, pastikan anda sudah mencari jawaban melalui FAQ yang sudah kami sediakan:</p>
+          <p>Berikut pertanyaan yang sering kami terima saat melayani clients dari berbagai bidang bisnis. Sebelum anda terhubung dengan tim Etnicode, pastikan anda sudah mencari jawaban melalui FAQ yang sudah kami sediakan:</p>
         </div>
 
         <div class="faq-list">
@@ -555,7 +555,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Sudah siap memaksimalkan perkembangan bisnis anda diera digital? Kini saatnya anda menjadi terdepan dari kompetitor anda, siapkan kebutuhan anda dan konsultasikan bersama tim Etnicode dibawah ini dengan mencantumkan nama dan alamat domisili: </p>
+          <p>Sudah siap Scale Up bisnis anda dengan kekuatan Digital? Kini saatnya anda menjadi terdepan dari kompetitor, siapkan kebutuhan anda dan konsultasikan bersama tim Etnicode dibawah ini dengan mencantumkan nama dan alamat domisili: </p>
         </div>
 
         <div class="row">
@@ -565,7 +565,7 @@
               <div class="address">
                 <i class="icofont-google-map"></i>
                 <h4>Location:</h4>
-                <p>Etnicode Media Solution, Jl. P. Syarif No.36, RT.02/RW.01, Rw. II, Saripan, Kec. Jepara, Kabupaten Jepara, Jawa Tengah 59414</p>
+                <p>Etnicode Digital Solution, Jl. P. Syarif No.36, RT.02/RW.01, Rw. II, Saripan, Kec. Jepara, Kabupaten Jepara, Jawa Tengah 59414</p>
               </div>
 
               <div class="email">
@@ -577,7 +577,7 @@
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Call:</h4>
-                <p>0822 6000 0513</p>
+                <p>0822-6000-0513 | Muhamad Anik</p>
               </div>
              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7926.834488057037!2d110.67277622761559!3d-6.594952300000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e711fc844afa0b7%3A0x32e2b44e2cb945fd!2sEtnicode%20Media%20Solution!5e0!3m2!1sid!2sid!4v1613206048582!5m2!1sid!2sid" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
@@ -618,7 +618,7 @@
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
-              <div class="text-center"><a class="send_form btn btn btn-outline-primary btn-rounded col-12" href="javascript:void" type="submit" title="Send Message">Send Message</a></div>
+              <div class="text-center"><a class="send_form btn btn btn-outline-primary btn-rounded col-12" href="javascript:void" type="submit" title="Send Message">Kirim Pesan</a></div>
             </form>
           </div>
 
@@ -642,7 +642,7 @@ var input_blanter = document.getElementById('wa_email');
 /* Whatsapp Settings */
 var walink = 'https://web.whatsapp.com/send',
     phone = '6282260000513',
-    walink2 = 'Hallo Etnicode Saya Ingin Konsultasi, berikut data diri saya: ',
+    walink2 = 'Hallo Etnicode, Saya Ingin Konsultasi, berikut data diri saya: ',
     text_yes = 'Terkirim.',
     text_no = 'Isi semua Formulir lalu klik Send.';
 

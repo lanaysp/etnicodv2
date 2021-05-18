@@ -83,7 +83,7 @@ class BlogController extends Controller
     {
         $data = $request->all();
 
-        $data['slug'] = Str::slug($request->name);
+        $data['slug'] = Str::slug($request->slug);
         $data['photo'] = $request->file('photo')->store('assets/blog', 'public');
 
         Blog::create($data);
@@ -134,7 +134,7 @@ class BlogController extends Controller
 
         $item = Blog::findOrFail($id);
 
-        $data['slug'] = Str::slug($request->name);
+        $data['slug'] = Str::slug($request->slug);
         // $data['photo'] = $request->file('photo')->store('assets/blog', 'public');
 
         $item->update($data);

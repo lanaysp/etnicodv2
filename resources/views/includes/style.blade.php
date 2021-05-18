@@ -2,7 +2,7 @@
   <!-- Favicons -->
   <link href="/images/fa.ico" rel="icon">
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  
+
   <meta charset="UTF-8">
   <meta name="Etnicode Media Solution" content="">
   <meta name="jasa pembuatan website, jasa seo website, jasa desain grafis, jasa pembuatan aplikasi android, jasa editing video profesional, jasa iklan ads murah, etnicode media solution" content="">
@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

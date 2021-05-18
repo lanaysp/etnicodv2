@@ -78,20 +78,26 @@ img.align-right {
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Create New Blog</h4>
+                    <h4>Buat Blog Baru</h4>
                   </div>
                   <div class="card-body">
                     <div class="clearfix"></div>
-       
+
           <form action="{{ route('blog.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="card">
               <div class="card-body">
                 <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-6">
                     <div class="form-group">
                       <label>Judul Blog</label>
                       <input type="text" class="form-control" name="name" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Slug Blog</label>
+                      <input type="text" class="form-control" name="slug" required />
                     </div>
                   </div>
                   <div class="col-md-12">

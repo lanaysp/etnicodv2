@@ -28,12 +28,12 @@
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">
+            <a href="{{ route('home') }}">
                 <img src="/images/03.png" alt="" style="width: 50%">
             </a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">ETC</a>
+            <a href="{{ route('home') }}">ETC</a>
           </div>
           <ul class="sidebar-menu mt-5">
               <li class="menu-header">User</li>

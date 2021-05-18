@@ -22,7 +22,7 @@ Register
                <form method="POST" action="{{ route('register') }}">
                     @csrf
                   <div class="row">
-                    <div class="form-group col-6">
+                    <div class="form-group col-lg-6 col-12">
                       <label for="first_name">Name</label>
                       <input id="name" v-model="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         @error('name')
@@ -31,7 +31,7 @@ Register
                             </span>
                         @enderror
                     </div>
-                    <div class="form-group col-6">
+                    <div class="form-group col-lg-6 col-12">
                       <label for="last_name">Email</label>
                       <input id="email" v-model="email" @change="checkForEmailAvailability()" type="email" class="form-control @error('email') is-invalid @enderror" :class="{ 'is-invalid' : this.email_unavailable }" name="email" value="{{ old('email') }}" required autocomplete="email">
                         @error('email')
@@ -44,7 +44,7 @@ Register
 
 
                   <div class="row">
-                    <div class="form-group col-6">
+                    <div class="form-group col-lg-6 col-12">
                       <label for="password" class="d-block">Password</label>
                       <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                         @error('password')
@@ -57,7 +57,7 @@ Register
                         <div class="label"></div>
                       </div>
                     </div>
-                    <div class="form-group col-6">
+                    <div class="form-group col-lg-6 col-12">
                       <label for="password2" class="d-block">Password Confirmation</label>
                       <input id="password-confirm" type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password">
                         @error('password_confirmation')

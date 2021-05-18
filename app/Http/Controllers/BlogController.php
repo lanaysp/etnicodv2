@@ -46,11 +46,12 @@ class BlogController extends Controller
 
     public function detail(Request $request, $slug)
     {
-        $blog = Blog::where('slug', $slug)->firstOrFail();$blogs = Blog::take(4)
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+        $blogs = Blog::take(4)
                 ->orderBy('id', 'desc')
                 ->get();
         $blogcategories = Blogcategory::take(6)->latest()->get();
-        
+
 
 
         return view('pages.blog-detail',[
