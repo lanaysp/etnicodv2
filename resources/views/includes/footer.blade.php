@@ -70,7 +70,7 @@
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; Copyright <strong><span>Etnicode Media Solution</span></strong> <?= date('Y');  ?>
+        &copy; Copyright <strong><span>Etnicode Digital Solution</span></strong> <?= date('Y');  ?>
       </div>
 
     </div>

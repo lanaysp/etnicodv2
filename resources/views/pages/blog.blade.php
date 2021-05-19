@@ -26,7 +26,7 @@
             <div class="container">
                 <div class="row">
                     @foreach ($blog as $item)
-                    <div class="col-md-3 col-sm-6 col-lg-4 item">
+                    <div class="col-md-3 col-sm-6 col-lg-4 item mb-3">
                         <a class="blog" href="{{ route('detail-blog',$item->slug) }}">
                         <div class="card item-card card-block">
                             <img class="blog" src="{{ Storage::url($item->photo) }}" alt="Photo of sunset">

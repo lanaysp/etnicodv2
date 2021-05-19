@@ -22,6 +22,7 @@
       </div>
     </section><!-- End Breadcrumbs -->
 
+    <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
 
@@ -29,15 +30,11 @@
           <h2>Portfolio</h2>
           <p>Alhamdulillah berkat kekompakan dan komitmen kami dalam membantu pertumbuhan UMKM di Indonesia, kami berhasil memberikan hasil terbaik dalam pengembangan bisnis clients. Berikut beberapa portfolio yang bisa kami hadirkan:</p>
         </div>
-
-                 <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <li data-filter="*" class="filter-active">All</li>
-                    <li data-filter=".filter-web">WEBSITE</li>
+               <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter=".filter-web" class="filter-active">WEBSITE</li>
                     <li data-filter=".filter-seo">SEO</li>
-                    <li data-filter=".filter-desaingrafis">DESAIN GRAFIS</li>
-                    <li data-filter=".filter-andorid">ANDROID</li>
-                    <li data-filter=".filter-andorid">EDITING VIDEO</li>
-                    <li data-filter=".filter-andorid">IKLAN ADS</li>
+                    <li data-filter=".filter-desaingrafis">DESAIN</li>
+                    <li data-filter=".filter-editing-video">VIDEO</li>
                 </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -53,6 +50,7 @@
         </div>
       </div>
     </section>
+    <!-- End Portfolio Section -->
 
   </main><!-- End #main -->
 

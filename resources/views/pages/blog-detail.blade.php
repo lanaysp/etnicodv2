@@ -4,6 +4,15 @@
     Blog Detail
 @endsection
 
+@push('addon-style')
+<style>
+    img.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+
+@endpush
 @section('content')
 
   <main id="main">
@@ -45,7 +54,7 @@
                    <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <form class="form-inline" action="/blog/cari" method="GET">
-                            <input class="form-control col-lg-8 mr-1" name="cari" type="search" placeholder="Search" aria-label="Search">
+                            <input class="form-control col-7 mr-1" name="cari" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-primary my-1 my-sm-0" type="submit">Search</button>
                         </form>
                     </div>

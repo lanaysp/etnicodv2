@@ -7,6 +7,7 @@
 @push('addon-style')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<script data-ad-client="ca-pub-9636385806961771" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 @endpush
 
 @section('content')
@@ -163,21 +164,21 @@
               </div>
 
               <div class="progress">
-                <span class="skill">Jasa SEO WEBSITE <i class="val">95%</i></span>
+                <span class="skill">JASA ARTIKEL WEBSITE <i class="val">95%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
 
               <div class="progress">
-                <span class="skill">JASA DESAIN GRAFIS <i class="val">90%</i></span>
+                <span class="skill">JASA SEO WEBSITE <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
 
               <div class="progress">
-                <span class="skill">APLIKASI ANDROID <i class="val">87%</i></span>
+                <span class="skill">JASA DESAIN GRAFIS <i class="val">87%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -213,16 +214,16 @@
           <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-search"></i></div>
-              <h4><a href="">Jasa SEO Website</a></h4>
-              <p>Website anda susah menempati Halaman Satu Google? Gunakan Jasa SEO Web Etnicode agar situs anda lebih cepat nangkring di Halaman Pertama Mesin Pencari.</p>
+              <h4><a href="">Jasa Artikel Website</a></h4>
+              <p>Jangan sampai sudah punya website tapi malah tidak pernah ngonten sama sekali. Daripada web nganggur, gunakan layanan artikel website kami. Website anda akan dikelola dengan baik.</p>
             </div>
           </div>
 
           <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-image"></i></div>
-              <h4><a href="">Jasa Desain Grafis</a></h4>
-              <p>Etnicode menawarkan Jasa Desain Grafis seperti Logo, Banner, Karatalog Produk, Konten Marketing dll dengan tampilan profesional yang siap membantu bisnis anda lebih mudah bersaing dengan kompetitor.</p>
+              <h4><a href="">Jasa SEO Website</a></h4>
+              <p>Website anda susah menempati Halaman Satu Google? Gunakan Jasa SEO Web Etnicode agar situs anda lebih cepat nangkring di Halaman Pertama Mesin Pencari.</p>
             </div>
           </div>
 
@@ -231,8 +232,8 @@
            <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-android"></i></div>
-              <h4><a href="">Jasa Pembuatan Aplikasi Android</a></h4>
-              <p>Bisnis anda membutuhkan Aplikasi Android? Etnicode siap membantu anda dengan layanan Jasa Pembuatan Aplikasi Android seperti Toko Online, Cafe, Chat, Perusahaan dan lain-lain.</p>
+              <h4><a href="">Jasa Desain Grafis</a></h4>
+              <p>Etnicode menawarkan Jasa Desain Grafis seperti Logo, Banner, Katalog Produk, Konten Marketing dll dengan tampilan profesional yang siap membantu bisnis anda lebih mudah bersaing dengan kompetitor.</p>
             </div>
           </div>
 
@@ -247,8 +248,8 @@
           <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4><a href="">Jasa Iklan Ads</a></h4>
-              <p>Ingin menaikkan traffic atau penjualan produk anda? Solusi yang tepat ialah menggunakan Iklan Ads. Saatnya kolaborasi dengan Etnicode untuk mendapat hasil yang optimal</p>
+              <h4><a href="">Online Courses</a></h4>
+              <p>Anda lebih tertarik mempelajari dunia website sendiri? Gabung di Program Online Courses Etnicode. Anda bisa mendapat ilmu dari pengalaman tim Etnicode dalam mengelola website.</p>
             </div>
           </div>
 
@@ -284,13 +285,10 @@
           <p>Alhamdulillah berkat kekompakan dan komitmen kami dalam membantu pertumbuhan UMKM di Indonesia, kami berhasil memberikan hasil terbaik dalam pengembangan bisnis clients. Berikut beberapa portfolio yang bisa kami hadirkan:</p>
         </div>
               <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <li data-filter="*" class="filter-active">All</li>
                     <li data-filter=".filter-web">WEBSITE</li>
                     <li data-filter=".filter-seo">SEO</li>
                     <li data-filter=".filter-desaingrafis">DESAIN GRAFIS</li>
-                    <li data-filter=".filter-andorid">ANDROID</li>
-                    <li data-filter=".filter-andorid">EDITING VIDEO</li>
-                    <li data-filter=".filter-andorid">IKLAN ADS</li>
+                    <li data-filter=".filter-editing-video">EDITING VIDEO</li>
                 </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -363,7 +361,7 @@
               <ul>
                 <li><i class="bx bx-check"></i> Toko Online</li>
                 <li><i class="bx bx-check"></i> Perusahaan</li>
-                <li><i class="bx bx-check"></i> Portal</li>
+                <li><i class="bx bx-check"></i> Portal Berita</li>
                 <li><i class="bx bx-check"></i> Porftolio</li>
                 <li><i class="bx bx-check"></i> Membership</li>
                 <li><i class="bx bx-check"></i> Korporasi</li>
@@ -378,7 +376,26 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="box featured">
-              <h3>JASA SEO WEBSITE</h3>
+              <h3>JASA PENULISAN ARTIKEL WEBSITE</h3>
+              <h4><sup></sup><span>Free Konsultasi</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Artikel Product</li>
+                <li><i class="bx bx-check"></i> Artikel Blog</li>
+                <li><i class="bx bx-check"></i> Artikel Mingguan</li>
+                <li><i class="bx bx-check"></i> Artikel Bulanan</li>
+                <li><i class="bx bx-check"></i> Artikel Tahunan</li>
+                <li><i class="bx bx-check"></i> Artikel Kontrak Panjang</li>
+                <li><i class="bx bx-check"></i> Artikel Backlink</li>
+                <li><i class="bx bx-check"></i> Diskusi Zoom Meeting</li>
+                <li><i class="bx bx-check"></i> Konsultasi Via Whatsapp</li>
+              </ul>
+              <a href="http://bit.ly/etnicodeartikelweb" class="buy-btn">Hubungi Etnicode</a>
+            </div>
+          </div>
+
+         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>JASA SEO WEBSITE PROFESIONAL</h3>
               <h4><sup></sup><span>Free Konsultasi</span></h4>
               <ul>
                 <li><i class="bx bx-check"></i> SEO Web Sekali Order</li>
@@ -388,8 +405,9 @@
                 <li><i class="bx bx-check"></i> SEO Web Sesuai Kebutuhan</li>
                 <li><i class="bx bx-check"></i> E-Courses SEO Website</li>
                 <li><i class="bx bx-check"></i> Garansi Halaman 1 Google</li>
-                <li><i class="bx bx-check"></i> Harga Terjangkau</li>
+                <li><i class="bx bx-check"></i> Diskusi Zoom Meeting</li>
                 <li><i class="bx bx-check"></i> Konsultasi Via Whatsapp</li>
+
               </ul>
               <a href="https://bit.ly/etnicodeseoweb" class="buy-btn">Hubungi Etnicode</a>
             </div>
@@ -414,29 +432,6 @@
             </div>
           </div>
 
-        </div>
-        <div class="row">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <h3>JASA PLIKASI ANDROID</h3>
-              <h4><sup></sup><span>Free Konsultasi</span></h4>
-              <ul>
-                <li><i class="bx bx-check"></i> Aplikasi Toko Online</li>
-                <li><i class="bx bx-check"></i> Aplikasi Marketplace</li>
-                <li><i class="bx bx-check"></i> Aplikasi Coffe Shop</li>
-                <li><i class="bx bx-check"></i> Aplikasi Food Market</li>
-                <li><i class="bx bx-check"></i> Aplikasi Chat</li>
-                <li><i class="bx bx-check"></i> Aplikasi Finance</li>
-                <li><i class="bx bx-check"></i> Aplikasi Agen Biro Wisata</li>
-                <li><i class="bx bx-check"></i> Aplikasi Healt/Fitness/Medicall</li>
-                <li><i class="bx bx-check"></i> Custom Sesuai Kebutuhan</li>
-
-              </ul>
-              <a href="https://bit.ly/etnicodeandroid" class="buy-btn">Hubungi Etnicode</a>
-            </div>
-          </div>
-
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="box featured">
               <h3>JASA EDITING VIDEO</h3>
@@ -458,20 +453,20 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="box">
-              <h3>JASA IKLAN ADS</h3>
+              <h3>ONLINE COURSES</h3>
               <h4><sup></sup><span>Free Konsultasi</span></h4>
               <ul>
-                <li><i class="bx bx-check"></i> Iklan Facebook Ads</li>
-                <li><i class="bx bx-check"></i> Iklan Instagram Ads</li>
-                <li><i class="bx bx-check"></i> Iklan Google Search</li>
-                <li><i class="bx bx-check"></i> Iklan Youtube Ads</li>
-                <li><i class="bx bx-check"></i> Iklan Google Shopping</li>
-                <li><i class="bx bx-check"></i> Iklan Google Display Network</li>
-                <li><i class="bx bx-check"></i> Iklan Google AdMob</li>
-                <li><i class="bx bx-check"></i> Iklan Tiktok Ads</li>
-                <li><i class="bx bx-check"></i> Free Konsultasi</li>
+                <li><i class="bx bx-check"></i> Toko Online Profesional</li>
+                <li><i class="bx bx-check"></i> Kuliah SEO Online</li>
+                <li><i class="bx bx-check"></i> Studi Kasus Web Pasti Bisa</li>
+                <li><i class="bx bx-check"></i> Website Membership</li>
+                <li><i class="bx bx-check"></i> Website Replika</li>
+                <li><i class="bx bx-check"></i> Web Affiliate & Dropshipper</li>
+                <li><i class="bx bx-check"></i> Sekali Daftar</li>
+                <li><i class="bx bx-check"></i> Free Update Materi</li>
+                <li><i class="bx bx-check"></i> Group Premium Member</li>
               </ul>
-              <a href="http://bit.ly/etnicodeiklanads" class="buy-btn">Hubungi Etnicode</a>
+              <a href="http://bit.ly/etnicodeonlinecourses" class="buy-btn">Hubungi Etnicode</a>
             </div>
           </div>
 
@@ -603,11 +598,11 @@
                   <select class="form-control"id="wa_select" required>
                       <option hidden='hidden' selected='selected' value='default'>-----Pilih Kebutuhan Anda-----</option>
                       <option value='JASA PEMBUATAN WEBSITE'>JASA PEMBUATAN WEBSITE</option>
+                      <option value='JASA ARTIKEL WEBSITE'>JASA ARTIKEL WEBSITE</option>
                       <option value='JASA SEO WEBSITE'>JASA SEO WEBSITE</option>
                       <option value='JASA DESAIN GRAFIS'>JASA DESAIN GRAFIS</option>
                       <option value='JASA EDITING VIDEO'>JASA EDITING VIDEO</option>
-                      <option value='JASA PEMBUATAN APLIKASI ANDROI'>JASA PEMBUATAN APLIKASI ANDROID</option>
-                      <option value='JASA IKLAN ADS'>JASA IKLAN ADS</option>
+                      <option value='ONLINE COURSES'>DAFTAR ONLINE COURSES</option>
                   </select>
                   <div class="validate"></div>
                 </div>

@@ -4,7 +4,6 @@
   Dashboard Admin Blog Update
 @endsection
   @push('addon-style')
- <script src="https://cdn.tiny.cloud/1/8kwp4j9fpd7qyfu11tso7lqqda6mmp25e1u4ahi1jtke22vj/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
  <style>
      /* For other boilerplate styles, see: /docs/general-configuration-guide/boilerplate-content-css/ */
 /*
@@ -65,6 +64,8 @@ img.align-right {
 
 
  </style>
+ <script src="https://cdn.tiny.cloud/1/8kwp4j9fpd7qyfu11tso7lqqda6mmp25e1u4ahi1jtke22vj/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
     @endpush
 @section('content')
 <!-- Section Content -->
@@ -205,10 +206,14 @@ tinymce.init({
     }
   },
   templates: [
+
         { title: 'New Table', description: 'creates a new table', content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>' },
     { title: 'Starting my story', description: 'A cure for writers block', content: 'Once upon a time...' },
     { title: 'New list with dates', description: 'New List with dates', content: '<div class="mceTmpl"><span class="cdate">cdate</span><br /><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>' }
   ],
+  image_class_list: [
+    {title: 'Responsive', value: 'img-responsive'}
+    ],
   template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
   template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
   height: 600,
