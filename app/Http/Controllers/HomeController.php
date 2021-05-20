@@ -26,20 +26,12 @@ class HomeController extends Controller
     {
          $suports = Suport::all();
          $teams = Team::all();
-         $portfolios = Portfolio::paginate(6);
-        //  $portfolios = Portfolio::whereKategori()->take(10)->get();
-        // $result = [];
-        //  $portfolios = ['filter-web', 'filter-seo', 'filter-desaingrafis'];
-        // foreach ($portfolios as $item) {
-        // $result[] = Portfolio::whereKategori($item)->take(1)->get();
-        // }
-
+         $portfolios = Portfolio::all();
          return view('pages.home',[
+            //  dd($portfolios),
             'teams' => $teams,
             'suports' => $suports,
             'portfolios' => $portfolios,
-            // 'result' => $result,
-            // dd($result)
         ]);
 
     }

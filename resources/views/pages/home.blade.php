@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <script data-ad-client="ca-pub-9636385806961771" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="google-site-verification" content="boIYHrhCDtpsq4oBjvBQZRRBw5yEUJyDft8SH8HrgNI" />
 @endpush
 
 @section('content')
@@ -284,24 +285,34 @@
           <h2>Portfolio</h2>
           <p>Alhamdulillah berkat kekompakan dan komitmen kami dalam membantu pertumbuhan UMKM di Indonesia, kami berhasil memberikan hasil terbaik dalam pengembangan bisnis clients. Berikut beberapa portfolio yang bisa kami hadirkan:</p>
         </div>
-              <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <li data-filter=".filter-web">WEBSITE</li>
-                    <li data-filter=".filter-seo">SEO</li>
-                    <li data-filter=".filter-desaingrafis">DESAIN GRAFIS</li>
-                    <li data-filter=".filter-editing-video">EDITING VIDEO</li>
-                </ul>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-            @foreach ($portfolios as $item)
-            <div class="col-lg-4 col-md-6 portfolio-item {{ $item->kategori }}">
-              <div class="portfolio-img"><img src="{{ Storage::url($item->photo) }}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>{{ $item->name }}</h4>
-                <a href="{{ $item->link }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
+            <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" id="filter-web-tab" data-toggle="pill" href="#filter-web" role="tab" aria-controls="filter-web" aria-selected="true">Website</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="filter-seo-tab" data-toggle="pill" href="#filter-seo" role="tab" aria-controls="filter-seo" aria-selected="false">Seo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="filter-desaingrafis-tab" data-toggle="pill" href="#filter-desaingrafis" role="tab" aria-controls="filter-desaingrafis" aria-selected="false">Desain Grafis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="filter-editing-video-tab" data-toggle="pill" href="#filter-editing-video" role="tab" aria-controls="filter-editing-video" aria-selected="false">Video Editing</a>
+            </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                @foreach ($portfolios as $item)
+                <div class="tab-pane fade" id="{{ $item->kategori }}" role="tabpanel" aria-labelledby="{{ $item->kategori }}-tab">
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                    <div class="portfolio-img"><img src="{{ Storage::url($item->photo) }}" class="img-fluid" alt=""></div>
+                    <div class="portfolio-info">
+                        <h4>{{ $item->name }}</h4>
+                        <a href="{{ $item->link }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                    </div>
+                    </div>
+                </div>
+                @endforeach
             </div>
-            @endforeach
-        </div>
+
       </div>
     </section>
     <!-- End Portfolio Section -->

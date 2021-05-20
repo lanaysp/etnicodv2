@@ -10,6 +10,14 @@
     max-width: 100%;
     height: auto;
 }
+blockquote {
+    max-width: 390px;
+    color: #5c4c40;
+    text-align: center;
+    border-left: 3px solid #897860;
+    padding-left: 5px;
+    margin-left: 40px;
+}
 </style>
 
 @endpush
