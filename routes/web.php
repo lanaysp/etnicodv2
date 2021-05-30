@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => true]);
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/landing-layanan', 'HomeController@landing')->name('landing');
 // home
+
 Route::post('/', 'HomeController@update')->name('root');
 
 Route::post('/', 'HomeController@send')->name('home-store');
@@ -121,6 +123,7 @@ Route::prefix('admin')
     ->group(function() {
         Route::get('/', 'DashboardController@index')->name('admin-dashboard');
         Route::resource('suport', 'SuportController');
+        Route::resource('landingportfolio', 'LandingPortfolioController');
         Route::resource('newsletter', 'NewsletterController');
         Route::resource('portfolio', 'PortfolioController');
         Route::resource('team', 'TeamController');

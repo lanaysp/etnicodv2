@@ -55,6 +55,19 @@
                <li class="{{ (request()->is('admin/portfolio')) ? 'active' : '' }}"><a class="nav-link" href="{{ route('portfolio.index') }}"><i class="far fa-bookmark"></i></i> <span>Portfolio</span></a></li>
                <li class="{{ (request()->is('admin/team')) ? 'active' : '' }}"><a class="nav-link" href="{{ route('team.index') }}"><i class="fas fa-address-card"></i></i> <span>Team</span></a></li>
                <hr>
+
+                <li class="nav-item dropdown {{ (request()->is('admin/landingportfolio')) ? 'active' : '' }}">
+                    <a href="#" class="nav-link has-dropdown"><i class="far fa-newspaper"></i> <span>Landing Page</span></a>
+                    <ul class="dropdown-menu">
+
+                    <li class="{{ (request()->is('admin/landingportfolio')) ? 'active' : '' }}"><a class="nav-link " href="{{ route('landingportfolio.index') }}"><i class="fas fa-sticky-note"></i> <span>Portfolio</span></a></li>
+
+                    <li class=""><a class="nav-link " href=""><i class="fab fa-youtube"></i> <span>Youtube</span></a></li>
+
+                    </ul>
+                </li>
+
+               <hr>
                <li class="{{ (request()->is('admin/newsletter')) ? 'active' : '' }}"><a class="nav-link" href="{{ route('newsletter.index') }}"><i class="fas fa-envelope-open-text"></i></i> <span>Newsletter</span></a></li>
 
                <hr>
@@ -64,7 +77,7 @@
                 @if ($item != null)
 
                 <li class="nav-item dropdown {{ (request()->is('admin/blog')) ? 'active' : '' }}">
-                <a href="#" class="nav-link has-dropdown"><i class="far fa-id-card"></i> <span>Layanan</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-id-card "></i> <span>Layanan</span></a>
                 @else
                 @endif
                 <ul class="dropdown-menu">

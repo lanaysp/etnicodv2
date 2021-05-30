@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Requests\NewsletterRequest;
 use App\Http\Requests\ServicesRequest;
 use App\Team;
@@ -11,7 +10,7 @@ use App\Newsletter;
 use App\Portfolio;
 use App\Services;
 use App\Billing;
-use App\Http\Requests\BillingRequest;
+use App\LandingPortfolio;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,6 +30,21 @@ class HomeController extends Controller
             //  dd($portfolios),
             'teams' => $teams,
             'suports' => $suports,
+            'portfolios' => $portfolios,
+        ]);
+
+    }
+    public function landing()
+    {
+         $suports = Suport::all();
+         $teams = Team::all();
+         $portfolios = Portfolio::all();
+         $landing_portfolio = LandingPortfolio::all();
+         return view('pages.landing',[
+            //  dd($landing_portfolio),
+            'teams' => $teams,
+            'suports' => $suports,
+            'landing_portfolio' => $landing_portfolio ,
             'portfolios' => $portfolios,
         ]);
 
