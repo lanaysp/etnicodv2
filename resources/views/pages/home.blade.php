@@ -270,7 +270,7 @@
               Hindari hal tersebut dengan menggunakan Layanan Profesional Etnicode.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle scrollto" href="{{ route('bundle') }}">Paket Langganan Etnicode</a>
+            <a class="cta-btn align-middle scrollto" href="{{ route('landing') }}">Paket Langganan Etnicode</a>
           </div>
         </div>
 
